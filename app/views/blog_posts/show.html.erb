@@ -15,5 +15,10 @@
   <%= @blog_post.blog_post %>
 </p>
 
+<p>
+	<%= render "comments/form" %>
+</p>
+
+
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
 <%= link_to 'Back', blog_posts_path %>
