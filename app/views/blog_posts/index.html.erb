@@ -12,18 +12,26 @@
     </tr>
   </thead>
 
-  <tbody>
+
+  <div class="row">
     <% @blog_posts.each do |blog_post| %>
-      <tr>
-        <td><%= blog_post.title %></td>
-        <td><%= blog_post.author %></td>
-        <td><%= blog_post.blog_post %></td>
-        <td><%= link_to 'Show', blog_post %></td>
-        <td><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
-        <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class = "col-md-6">
+      <div class = "panel panel-class">
+      <div class = "panel-heading">
+        <p><%= blog_post.title %></p>
+      </div>
+      <div class = "panel-body">
+        <p><%= blog_post.author %></p>
+        <p><%= blog_post.blog_post %></p>
+      </div>
+        <p><%= link_to 'Show', blog_post %></p>
+        <p><%= link_to 'Edit', edit_blog_post_path(blog_post) %></p>
+        <p><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+      </div>
+
     <% end %>
-  </tbody>
+  </div>
 </table>
 
 <br>
